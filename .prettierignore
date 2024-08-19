@@ -1,0 +1,15 @@
+# Commonly ignored Node.js files
+node_modules
+npm-debug.log
+.npm
+pnpm-lock.yaml
+
+# Next.js Build Output
+.next
+build
+
+# Next.js Generated Files
+public/static/documents
+
+# TypeScript
+tsconfig.tsbuildinfo

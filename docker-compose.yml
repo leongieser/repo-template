@@ -1,0 +1,8 @@
+services:
+  netxtapp:
+    container_name: netxtapp
+    build:
+      context: .
+    restart: always
+    ports:
+      - 3000:3000

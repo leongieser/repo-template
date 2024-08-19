@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc.json",
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "React": true,
+    "JSX": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:unicorn/recommended",
+    "next",
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "eslint-plugin-unicorn",
+    "@stylistic",
+    "prettier"
+  ],
+  "rules": {
+    "unicorn/filename-case": "off",
+    "@stylistic/arrow-parens": ["warn", "always"],
+    "@stylistic/comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "object-shorthand": "warn",
+    "quote-props": ["warn", "as-needed"],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    // "@typescript-eslint/no-unnecessary-type-assertion": "warn",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/consistent-type-assertions": [
+      "warn",
+      {
+        "assertionStyle": "as",
+        "objectLiteralTypeAssertions": "never"
+      }
+    ],
+    "react/jsx-fragments": ["warn", "syntax"],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": ["ts", "tsx"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "prettier/prettier": "warn",
+    "unicorn/prefer-string-raw": "off",
+    "unicorn/no-await-expression-member": "off",
+    "unicorn/prevent-abbreviations": [
+      "warn",
+      {
+        "ignore": ["\\.e2e$"],
+        "allowList": {
+          "env": true,
+          "generateStaticParams": true,
+          "Props": true
+        }
+      }
+    ],
+    "unicorn/template-indent": [
+      "error",
+      {
+        "tags": ["outdent", "dedent", "sql", "styled"],
+        "functions": ["dedent", "stripIndent"],
+        "selectors": ["TemplateLiteral"],
+        "comments": ["HTML", "indent"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "extends": ["plugin:@typescript-eslint/disable-type-checked"],
+      "files": ["./**/*.cjs"]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+node_modules
+
+.next
+build
+
+coverage
+junit.xml
+
+global.d.ts
+
+next.config.mjs
+.*.js

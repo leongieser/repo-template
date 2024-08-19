@@ -1,0 +1,69 @@
+{
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    // useRouter should be imported from `next/navigation` instead of `next/router`
+    "next/router.d.ts",
+    "next/dist/client/router.d.ts",
+    // give priority for Link to next/link instead of lucide-react
+    "lucide-react"
+  ],
+  "explorer.sortOrder": "filesFirst",
+  "editor.formatOnSave": true,
+  "search.exclude": {
+    "package-lock.json": true,
+    "package-lock.yaml": true
+  },
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll.eslint",
+    "source.fixAll.prettier"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.enable": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "prettier.enable": true,
+  "prettier.requireConfig": true,
+  "prettier.configPath": ".prettierrc",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "testing.openTesting": "neverOpen",
+  "[json][jsonc][yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.ignorePath": ".gitignore", // Don't run prettier for files listed in .gitignore
+  // "i18n-ally.localesPaths": ["src/locales"],
+  // "i18n-ally.keystyle": "nested",
+  "files.exclude": {
+    // "**/.git": true,
+    // "**/.DS_Store": true,
+    // "**/.next": true,
+    // "**/node_modules": true,
+    // ".gitignore": true,
+    // ".husky": true,
+    // ".editorconfig": true,
+    // ".eslintrc.json": true,
+    // ".lefthook.yml": true,
+    // ".eslintignore": true,
+    // ".gitattributes": true,
+    // ".lintstagedrc": true,
+    // ".prettierrc": true,
+    // ".prettierignore": true,
+    // "next-env.d.ts": true,
+    // "tsconfig.json": true,
+    // "postcss.config.*": true,
+    // "package-lock.json": true,
+    // "tailwind.config.*": true,
+    // "package.json": true,
+    // "next.config.*": true,
+    // "docker-compose.yml": true,
+    // "Dockerfile": true
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["tw\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["cnBase\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}
